@@ -3,7 +3,7 @@
     <div class="col-xs-12" >
       <h2>Mes appareils</h2>
 
-      <p>Mise à jour :  {{lastUpdate | date : 'y MMMM EEEE d' | lowercase}}</p>
+      <p>Mise à jour :  {{lastUpdate | async | date : 'y MMMM EEEE d' | lowercase}}</p>
 
       <ul class="list-group">
         <app-appareil  *ngFor = "let appareil of appareils"
