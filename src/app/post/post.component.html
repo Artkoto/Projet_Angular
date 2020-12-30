@@ -1,0 +1,23 @@
+<li [ngClass]="{
+    'list-group-item' : true,
+    'list-group-item-success' : isLike,
+    'list-group-item-danger' : isDisLike
+}">
+<h2>{{postTitle}}</h2>
+<h4>{{postCreaatedAt | date : 'short'}}</h4>
+<p>{{postContent}}</p>
+<button class="btn btn-primary"
+[disabled]="isLike"
+(click)="like()"
+>Licke ({{postLoversIts}})</button> &nbsp;&nbsp;
+
+<button class="btn btn-danger"
+[disabled] = "isDisLike"
+(click)= "dislike()"
+>Dislike</button>&nbsp;&nbsp;
+
+<button class="btn btn-default"
+[disabled] = "!isDisLike && !isLike"
+(click)="reset()"
+>Reset</button>
+</li>
