@@ -11,12 +11,16 @@ import { AuthComponent } from './auth/auth.component';
 import { PostViewComponent } from './post-view/post-view.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SinglePostComponent } from './single-post/single-post.component';
+import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 
 const appRoutes : Routes = [
   {path: 'posts' , component: PostViewComponent},
   {path: 'auth' , component : AuthComponent},
   {path:'posts/:id' , component : SinglePostComponent},
-  {path :'' , component : PostViewComponent}
+  {path :'' , component : PostViewComponent},
+  {path: 'not-found', component: FourOhFourComponent},
+  {path: '**' , redirectTo: 'not-found'}
+  
 ];
 
 @NgModule({
@@ -25,7 +29,8 @@ const appRoutes : Routes = [
     PostComponent,
     AuthComponent,
     PostViewComponent,
-    SinglePostComponent
+    SinglePostComponent,
+    FourOhFourComponent
   ],
   imports: [
     BrowserModule,
