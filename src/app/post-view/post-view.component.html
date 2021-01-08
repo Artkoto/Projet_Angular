@@ -1,0 +1,25 @@
+<div class="col-xs-12" >
+    <h2>Posts</h2>
+
+    <ul class="list-group">
+      <app-post *ngFor = "let post  of posts"
+      [postTitle] = "post.title"
+      [postContent]="post.content"
+      [postCreaatedAt] = "post.date"
+      [isLike] = "post.isLike"
+      [isDisLike] = "post.isDisLike"
+      [postLoversIts] = "post.loves">
+      </app-post>
+    </ul>
+    <button class="btn btn-primary"
+    (click)="toutAimer()"
+    >Tout aimer</button> &nbsp;&nbsp;
+
+    <button class="btn btn-danger"
+    (click)= "toutnAimer()"
+    >Tout disliker</button>&nbsp;&nbsp;
+
+    <button class="btn btn-default"
+    (click)="toutInit()"
+    >Tout reinitialiser</button>
+  </div>

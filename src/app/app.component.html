@@ -1,17 +1,19 @@
-<div class="container">
-  <div class="row">
-    <div class="col-xs-12" >
-      <h2>Posts</h2>
-
-      <ul class="list-group">
-        <app-post *ngFor = "let post  of posts"
-        [postTitle] = "post.title"
-        [postContent]="post.content"
-        [postCreaatedAt] = "post.date"
-        [isLike] = "post.isLike"
-        [isDisLike] = "post.isDisLike">
-        </app-post>
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-colpse">
+      <ul class="nav navbar-nav">
+        <li routerLinkActive="active" ><a routerLink="auth">Authentification</a></li>
+        <li routerLinkActive="active"><a routerLink="posts"> Posts</a></li>
       </ul>
     </div>
+  </div>
+</nav>
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+   <router-outlet></router-outlet>
+   </div>
   </div>
 </div>
