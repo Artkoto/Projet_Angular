@@ -13,6 +13,7 @@ export class PostComponent implements OnInit {
   @Input() postCreaatedAt : Date = new Date() ;
   @Input() isLike : boolean = false ;
   @Input() isDisLike : boolean = false ;
+  @Input() id : number = 0 ;
 
 
   constructor() {
