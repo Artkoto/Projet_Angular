@@ -12,14 +12,19 @@ import { PostViewComponent } from './post-view/post-view.component';
 import { RouterModule, Routes } from '@angular/router';
 import { SinglePostComponent } from './single-post/single-post.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+import { AuthGuard } from './services/auth-guard.service';
+
 
 const appRoutes : Routes = [
-  {path: 'posts' , component: PostViewComponent},
+  {path: 'posts' ,canActivate: [AuthGuard], component: PostViewComponent},
   {path: 'auth' , component : AuthComponent},
-  {path:'posts/:id' , component : SinglePostComponent},
+  {path:'posts/:id' ,canActivate: [AuthGuard], component : SinglePostComponent},
   {path :'' , component : PostViewComponent},
-  {path: 'not-found', component: FourOhFourComponent},
-  {path: '**' , redirectTo: 'not-found'}
+  {path: 'not-found',canActivate: [AuthGuard], component: FourOhFourComponent},
+  {path: '**' , redirectTo: 'not-found'},
+  {path: 'posts/:id/**' ,canActivate: [AuthGuard], redirectTo: 'not-found'}
+
+  
   
 ];
 
@@ -39,7 +44,8 @@ const appRoutes : Routes = [
   ],
   providers: [
     PostService,
-    AuthService
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })
