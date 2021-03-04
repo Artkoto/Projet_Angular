@@ -24,7 +24,7 @@ export class AuthComponent implements OnInit {
       () => {
         console.log('Connecté avec success');
         this.authStatus = this.authservice.isAuth;
-        this.route.navigate(['posts']);
+        this.route.navigate(['posts/']);
       }
     );
   }
@@ -32,6 +32,7 @@ export class AuthComponent implements OnInit {
   onSingOut(){
     this.authservice.singOut();
     this.authStatus = this.authservice.isAuth ;
+    this.route.navigate(['posts/']);
   }
 
 }

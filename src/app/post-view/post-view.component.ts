@@ -1,3 +1,4 @@
+//component pour l'affichage de la liste de films
 import { Component, OnInit } from '@angular/core';
 import{PostService} from '../services/post.service';
 
@@ -8,22 +9,21 @@ import{PostService} from '../services/post.service';
 })
 export class PostViewComponent implements OnInit {
 
+  filtre : string = '';
   posts : any =[] ;
   constructor(private postService : PostService){
   }
 
   ngOnInit(){
+    this.postService.getMovie(this.filtre);
     this.posts = this.postService.posts ;
   }
 
-  toutAimer(){
-    this.postService.likeAll();
-  }
-  toutnAimer(){
-    this.postService.disLikeAll();
-  }
-  toutInit(){
-    this.postService.resetAll();
+  //filtre et MAJ de la liste
+  filter(){
+    this.postService.filter(this.filtre);
+    this.postService.getMovie(this.filtre);
+    this.posts = this.postService.posts ;
   }
 
 

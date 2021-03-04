@@ -12,35 +12,21 @@ export class PostComponent implements OnInit {
   @Input() postLoversIts : number = 0 ;
   @Input() postCreaatedAt : Date = new Date() ;
   @Input() isLike : boolean = false ;
-  @Input() isDisLike : boolean = false ;
   @Input() id : number = 0 ;
+  @Input() miniature : string = '' ;
+  @Input() afficheBack : string ='';
 
 
   constructor() {
   
   }
 
-  like(){
-    this.postLoversIts += 1 ;
-    this.isLike = true ;
-    this.isDisLike = false;
-  }
-  dislike(){
-     
-    if(this.isLike){
-      this.postLoversIts -= 1 ;
+  like(){    
+    if (!this.isLike) {
+      this.isLike = true ;
+    } else {
       this.isLike = false ;
-    }
-    this.isDisLike = true;
-  }
-
-  reset(){
-    if(this.isLike){
-      this.postLoversIts -= 1 ;
-    }
-    this.isLike = false ;
-    this.isDisLike = false;
-
+    }    
   }
 
   ngOnInit(): void {

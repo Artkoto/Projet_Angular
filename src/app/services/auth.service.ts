@@ -1,3 +1,4 @@
+//authentification (utilisation de Promise pour le traitement asynchrone des données)
 export class AuthService {
     isAuth = false ;
 

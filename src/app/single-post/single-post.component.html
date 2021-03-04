@@ -1,4 +1,16 @@
+
+<div class="container"> 
+<img src={{afficheBack}} width="100%" style="margin-bottom: 5px; max-height: 500px;">
+
+</div>
 <h2>{{ titre }}</h2>
+<h5>{{creaatedAt | date : 'longDate'}}</h5>
+<p>Notes des utilisateurs </p>
+<div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+      {{lickes*10}}%
+    </div>
+  </div>
 <p>{{description}}</p>
 
-<a routerLink="/posts">Retour à la liste</a>
+<a class="btn btn-primary btn-lg" routerLink="/posts">  <span class="glyphicon glyphicon-menu-left" aria-hidden="true"></span> Retour à la liste</a>

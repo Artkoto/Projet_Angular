@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { PostComponent } from './post/post.component';
@@ -14,15 +15,15 @@ import { SinglePostComponent } from './single-post/single-post.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
 import { AuthGuard } from './services/auth-guard.service';
 
-
+// Routage de l'application
 const appRoutes : Routes = [
-  {path: 'posts' ,canActivate: [AuthGuard], component: PostViewComponent},
+  {path: 'posts' , component: PostViewComponent},
   {path: 'auth' , component : AuthComponent},
   {path:'posts/:id' ,canActivate: [AuthGuard], component : SinglePostComponent},
   {path :'' , component : PostViewComponent},
-  {path: 'not-found',canActivate: [AuthGuard], component: FourOhFourComponent},
+  {path: 'not-found', component: FourOhFourComponent},
   {path: '**' , redirectTo: 'not-found'},
-  {path: 'posts/:id/**' ,canActivate: [AuthGuard], redirectTo: 'not-found'}
+  {path: 'posts/:id/**', redirectTo: 'not-found'}
 
   
   
@@ -40,6 +41,7 @@ const appRoutes : Routes = [
   imports: [
     BrowserModule,
     FormsModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
   providers: [

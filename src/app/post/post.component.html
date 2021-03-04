@@ -1,28 +1,23 @@
-<li [ngClass]="{
-    'list-group-item' : true,
-    'list-group-item-success' : isLike,
-    'list-group-item-danger' : isDisLike
-}">
-<h2>{{postTitle}}</h2>
-<h4>{{postCreaatedAt | date : 'short'}}</h4>
-<p>{{postContent}}</p>
+
+<div [ngClass]="{
+    'list-group-item' : true
+}" class="col-xs-12 col-sm-4  col-md-3 col-lg-2 " style="background-color: whitesmoke;
+ margin-top: 1em; margin-bottom: 2em ; min-height: 500px;"
+ >
+ <a [routerLink]="[id]">
+<h3>{{postTitle | titlecase |slice:0:10}}</h3>
+<h5>{{postCreaatedAt | date : 'longDate'}}</h5>
+<img src={{miniature}} class="img-responsive img-rounded" style="margin-bottom: 5px;">
+<p>{{postContent |slice:0:50}} ...</p>
+</a>
 <button class="btn btn-primary"
-[disabled]="isLike"
 (click)="like()"
->Licke ({{postLoversIts}})</button> &nbsp;&nbsp;
+><span *ngIf="isLike" class="glyphicon glyphicon-heart" aria-hidden="true" style="color: red;"></span>
+<span *ngIf="!isLike" class="glyphicon glyphicon-heart" aria-hidden="true"></span>
+ ({{postLoversIts}})
+</button> &nbsp;&nbsp;
 
-<button class="btn btn-danger"
-[disabled] = "isDisLike"
-(click)= "dislike()"
->Dislike</button>&nbsp;&nbsp;
-
-<button class="btn btn-default"
-[disabled] = "!isDisLike && !isLike"
-(click)="reset()"
->Reset</button>&nbsp;&nbsp;
-
-<a [routerLink]="[id]">detaille</a>
-</li>
+</div>
 
 
 
