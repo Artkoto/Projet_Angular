@@ -1,10 +1,18 @@
 import { HttpClient } from '@angular/common/http';
 import{Injectable} from '@angular/core';
 
-@Injectable({providedIn: 'root'})
+//interface data pour la lecture des donnees 
+export interface Donnees {
+    page:          number;
+    results:       any[];
+    total_pages:   number;
+    total_results: number;
+}
 
+@Injectable({providedIn: 'root'})
 export class PostService {
   posts : any =[] ;
+  
 
   constructor(private http:HttpClient){
   }
@@ -13,8 +21,8 @@ export class PostService {
   getMovie(txt : string)  {
     this.posts = [];
     const fitre = (txt.trim()!='')?txt:'a';
-     this.http.get('https://api.themoviedb.org/4/search/movie?api_key=3dccbe5a12ae070c80aa0ddcff77a1ea&query='+fitre+'&language=fr').subscribe((data) => {
-     console.log(data);
+     this.http.get<Donnees>('https://api.themoviedb.org/4/search/movie?api_key=3dccbe5a12ae070c80aa0ddcff77a1ea&query='+fitre+'&language=fr').subscribe((data) => {
+    //console.log(data);
        data.results.forEach(((e : any)  => {
          if(e.title!=null && e.overview!=null && e.overview!='')
         this.posts.push({
