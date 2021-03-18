@@ -20,6 +20,7 @@ const appRoutes : Routes = [
   {path: 'posts' , component: PostViewComponent},
   {path: 'auth' , component : AuthComponent},
   {path:'posts/:id' ,canActivate: [AuthGuard], component : SinglePostComponent},
+  {path:':id' ,canActivate: [AuthGuard], component : SinglePostComponent},
   {path :'' , component : PostViewComponent},
   {path: 'not-found', component: FourOhFourComponent},
   {path: '**' , redirectTo: 'not-found'},

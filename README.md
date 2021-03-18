@@ -1,7 +1,7 @@
 # Tp2 WE (Angular)
+Arnaud AKOTO & Maurice MBILIA
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.5.
-
+Ce projet est dans la forme différente du TP2 de WE mais dans l'ensemble, nous avons mis en oeuvre les consignes du TP.
 
 
 ## Development server

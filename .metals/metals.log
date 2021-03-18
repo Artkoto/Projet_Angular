@@ -16,3 +16,21 @@ INFOS: Unsupported notification method: $/setTraceNotification
 [0m2021.03.03 13:53:11 WARN  no build tool detected in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
 mars 03, 2021 3:40:55 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFOS: Unsupported notification method: $/setTraceNotification
+[0m2021.03.05 01:26:26 INFO  shutting down Metals[0m
+[0m2021.03.11 08:44:46 INFO  Started: Metals version 0.10.0 in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular' for client vscode 1.54.1.[0m
+[0m2021.03.11 08:44:49 INFO  time: initialize in 3.31s[0m
+[0m2021.03.11 08:44:54 WARN  Build server is not auto-connectable.[0m
+[0m2021.03.11 08:44:54 WARN  no build tool detected in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+mars 11, 2021 8:46:29 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTraceNotification
+[0m2021.03.12 13:04:06 INFO  Started: Metals version 0.10.0 in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular' for client vscode 1.54.2.[0m
+[0m2021.03.12 13:04:08 INFO  time: initialize in 2.19s[0m
+[0m2021.03.12 13:04:19 WARN  Build server is not auto-connectable.[0m
+[0m2021.03.12 13:04:19 WARN  no build tool detected in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+[0m2021.03.13 00:49:21 INFO  shutting down Metals[0m
+[0m2021.03.18 19:24:53 INFO  Started: Metals version 0.10.0 in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular' for client vscode 1.54.3.[0m
+[0m2021.03.18 19:24:57 INFO  time: initialize in 4.12s[0m
+[0m2021.03.18 19:24:58 WARN  Build server is not auto-connectable.[0m
+[0m2021.03.18 19:24:58 WARN  no build tool detected in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
+mars 18, 2021 8:21:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTraceNotification
