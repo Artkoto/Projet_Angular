@@ -22,7 +22,7 @@ export class AuthComponent implements OnInit {
   onSingIn(){
     this.authservice.singIn().then(
       () => {
-        console.log('Connecté avec success');
+        //console.log('Connecté avec success');
         this.authStatus = this.authservice.isAuth;
         this.route.navigate(['posts/']);
       }

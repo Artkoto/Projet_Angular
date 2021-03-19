@@ -34,3 +34,9 @@ INFOS: Unsupported notification method: $/setTraceNotification
 [0m2021.03.18 19:24:58 WARN  no build tool detected in workspace '/home/artkoto/X/Istic/M1Info/Semestre_2/WE/TP/WEWorkspace/tp2_angular/tp2_angular'. The most common cause for this problem is that the editor was opened in the wrong working directory, for example if you use sbt then the workspace directory should contain build.sbt. [0m
 mars 18, 2021 8:21:22 PM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
 INFOS: Unsupported notification method: $/setTraceNotification
+mars 19, 2021 12:16:58 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTraceNotification
+mars 19, 2021 12:16:58 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTraceNotification
+mars 19, 2021 12:17:09 AM org.eclipse.lsp4j.jsonrpc.services.GenericEndpoint notify
+INFOS: Unsupported notification method: $/setTraceNotification
