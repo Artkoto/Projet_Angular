@@ -47,3 +47,44 @@ C'est là qu'on implémente les méthodes  pour récupérer le film avec son `id
 ***
 ## Lancer "TP2 WE (Angular)"
 
+Si vous n'avez pas angular CLI installer sur votre machine [cliquez ici](https://angular.io/guide/setup-local)
+
+### Option1 : lancement en développement
++ Exécutez :
+```
+ng serve
+```
++ Sur votre navigateur, Accédez à "http://localhost:4200" 
+
+### Option 2 : lancement en production
+
++ Avant de lancer l'application vous devez préalablement le build avec la commende suivante depuis le répertoire du projet : 
+
+```bash
+ng build --prod
+``` 
+
++ L'action précédente génère le dossier "`dist`" qui contient les fichiers prêts à être déployés. Copier les dans le répertoire de votre serveur (apache , nginx ou autre) vous aurez préalablement paramétré.
+
++ Lancez votre serveur et entrez l'uri de l'application dans votre navigateur.
+
+***
+### Exemple de paramétrage nginx
+```nginx
+server{
+
+	server_name my-app;
+	keepalive_timeout 5;
+	root /var/www/tp2_angular;
+	charset utf-8;
+	
+
+	  location / {
+        try_files $uri $uri/ /index.html;
+       }
+	
+	listen localhost:80;
+}
+
+```
+***
