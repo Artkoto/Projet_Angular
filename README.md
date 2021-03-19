@@ -66,7 +66,7 @@ ng build --prod
 
 + L'action précédente génère le dossier "`dist`" qui contient les fichiers prêts à être déployés. Copier les dans le répertoire de votre serveur (apache , nginx ou autre) vous aurez préalablement paramétré.
 
-+ Lancez votre serveur et entrez l'uri de l'application dans votre navigateur.
++ Lancez votre serveur et entrez l'url de l'application dans votre navigateur.
 
 ***
 ### Exemple de paramétrage nginx
