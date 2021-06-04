@@ -1,6 +1,6 @@
 # Tp2 WE (Angular)
 ***
-Arnaud AKOTO & Maurice MBILIA
+Arnaud AKOTO
 ***
 Ce projet est dans la forme différent du TP2 de WE mais dans l'ensemble, nous avons mis en oeuvre les même consignes.
 
